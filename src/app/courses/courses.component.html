@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <app-search (searchEvent)="searchCourse($event)"></app-search>
+    <app-filter [all]="getTotalCoarses()"
+                [free]="getFreeCoarses()"
+                [pre]="getPreCoarses()"
+                (buttonChangeEvent)="changedCourses($event)"></app-filter>
+    
+    
+    <div class="corses" >
+        <ng-container *ngFor="let item of courses">
+            <!-- *ngIf="selectedCourses==='All' || selectedCourses===item.stats"-->
+            <div  class="corse" *ngIf="searchedCourse ===' ' ||item.title.toLowerCase().includes(searchedCourse) " >
+                <div class="image">
+                    <img [src]="item.img" width="260px" height="150px">
+                </div>
+                <div class="info">
+                    <div class="title">{{item.title}}</div>
+                    <div class="defination">{{item.defi}}</div>
+                    <div class="cost">
+                        <div class="status" [ngStyle]="{color: item.stats==='Free' ? 'Green' :'Red'}">{{item.stats}}</div>
+                        <div class="price"><span >Price:</span>${{item.price}}</div>
+                    </div>
+                    <div class="availability">
+                        <button type="button" class="buy">Buy Now</button>
+                        <button type="button" class="details">Show Details</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>  
+    </div>
+</div>
+

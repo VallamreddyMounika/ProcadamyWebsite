@@ -1,0 +1,70 @@
+.wrapper{
+    background-color:#E0E0E0 ;
+    padding-bottom: 20px;
+}
+
+.corses{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.corse{
+    background-color:white;
+    height: 350px;
+    width: 260px;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+}
+.defination{
+    padding: 15px;
+    font-size: 17px;
+    height: 60px;
+}
+
+.cost{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+.status{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.price{
+    font-size: 20px;
+}
+span{
+    font-weight: bold;
+}
+.availability{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+.buy{
+    background-color: lightsalmon;
+    border:none;
+    font-size: 18px;
+    height: 40px;
+    
+    
+}
+.details{
+    background-color: lightgreen;
+    border: none;
+    font-size: 18px;
+    height: 40px;
+    
+}
